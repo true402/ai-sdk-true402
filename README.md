@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@true402.dev/ai-sdk)](https://www.npmjs.com/package/@true402.dev/ai-sdk) &nbsp; **Stable · production-ready** — semver-stable public API (v1.0).
 
-true402 tools for the **Vercel AI SDK** — give your Base agent **pay-per-call on-chain safety** over [x402](https://x402.org): rug/honeypot checks, address safety, and deployer reputation. No account, no API key — the wallet is the identity (USDC on Base, gas sponsored by the facilitator).
+true402 tools for the **Vercel AI SDK** — give your agent **pay-per-call on-chain safety and search/SEO data** over [x402](https://x402.org): rug/honeypot checks, address safety, deployer reputation, backlinks, and keyword research. No account, no API key — the wallet is the identity (USDC on Base, gas sponsored by the facilitator).
 
 ```bash
 npm i @true402.dev/ai-sdk ai
@@ -29,6 +29,10 @@ The model can call, before it trades:
 | `true402_tx_preflight` | Check an **unsigned** transaction before signing: does it revert, does it grant an unlimited approval, has the counterparty been draining liquidity. Takes no key and no signature | $0.008 |
 | `true402_liquidity_history` | What already happened to a token's liquidity — every removal with amount/block/tx, plus the tokens drained in the same transaction | $0.005 |
 | `true402_deployer_check` | Deployer reputation — who made the token + their track record | $0.008 |
+| `true402_backlinks` | A domain's backlink profile — referring domains/pages, dofollow split, authority rank, spam score | $0.10 |
+| `true402_keyword_volume` | Search volume, CPC, competition and trend for up to **200 keywords in one call** — priced per call, not per keyword | $0.15 |
+| `true402_ranked_keywords` | Keywords a domain already ranks for, with position and URL — competitor research or self-audit | $0.05 |
+| `true402_keyword_ideas` | Related/long-tail keyword ideas for a seed term, with volume and search intent | $0.05 |
 
 `payerPrivateKey` is a Base wallet holding a little USDC. Without it the stalls still return their HTTP 402 price, so the agent can decide. Override `baseUrl` / `rpcUrl` in the options if self-hosting.
 
