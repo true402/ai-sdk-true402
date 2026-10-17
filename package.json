@@ -1,0 +1,53 @@
+{
+  "name": "@true402.dev/ai-sdk",
+  "version": "1.4.3",
+  "description": "true402 tools for the Vercel AI SDK — pay-per-call on-chain rug/honeypot & address safety, plus search/SEO data (backlinks, keyword volume, rankings), for AI agents over x402 (USDC, no account, no API key).",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "vercel-ai-sdk",
+    "ai-sdk",
+    "x402",
+    "base",
+    "rug-check",
+    "honeypot",
+    "token-safety",
+    "crypto",
+    "ai-agent",
+    "agent-tools",
+    "defi",
+    "web3",
+    "seo",
+    "backlinks",
+    "keyword-research",
+    "ai-agents",
+    "hermes-agent",
+    "mcp"
+  ],
+  "homepage": "https://true402.dev",
+  "license": "MIT",
+  "dependencies": {
+    "viem": "^2.21.0",
+    "zod": "^3.23.0"
+  },
+  "peerDependencies": {
+    "ai": ">=3.1.0"
+  },
+  "devDependencies": {
+    "ai": "^4.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
