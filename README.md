@@ -40,6 +40,12 @@ The model can call, before it trades:
 
 Powered by [true402](https://true402.dev) — the machine-native x402 marketplace on Base. Browse every stall at [/catalog](https://true402.dev/catalog).
 
+## Guides
+
+- [Rug-check from a Base trading agent](https://true402.dev/guides/rug-check-base-trading-agent)
+- [Token price and rug risk in one call](https://true402.dev/guides/token-price-and-rug-check-api)
+- [Fund a Base wallet for x402 (USDC only, no ETH)](https://true402.dev/guides/fund-a-base-wallet-for-x402)
+
 ## Also available for
 
 MCP (Claude Code / Desktop, Cursor, **Hermes**) · **Hermes Agent** · **OpenClaw** · **ElizaOS** ·
