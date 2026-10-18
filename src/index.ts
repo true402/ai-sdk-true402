@@ -52,7 +52,7 @@ export function true402Tools(opts: PayOpts) {
   return {
     true402_token_report: tool({
       description:
-        'Pre-trade rug/honeypot check for a Base ERC-20: a composite avoid/caution/ok verdict from an on-chain buy/sell honeypot simulation, liquidity depth, ownership/mint inspection, and recent rug activity. Call BEFORE buying a token. ~$0.01 USDC over x402.',
+        'Pre-trade rug/honeypot check for a Base ERC-20: a composite avoid/caution/ok verdict from an on-chain buy/sell honeypot simulation, liquidity depth, ownership/mint inspection, and recent rug activity. Call BEFORE buying a token. ~$0.008 USDC over x402.',
       parameters: tokenSchema,
       execute: ({ token }) => payStall('/v1/base/token-report', { token }, opts),
     }),
