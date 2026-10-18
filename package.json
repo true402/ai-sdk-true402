@@ -1,6 +1,6 @@
 {
   "name": "@true402.dev/ai-sdk",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "true402 tools for the Vercel AI SDK — pay-per-call on-chain rug/honeypot & address safety, plus search/SEO data (backlinks, keyword volume, rankings), for AI agents over x402 (USDC, no account, no API key).",
   "type": "module",
   "main": "dist/index.js",
