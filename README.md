@@ -23,7 +23,7 @@ The model can call, before it trades:
 
 | Tool | What it does | ~price |
 |---|---|---|
-| `true402_token_report` | Composite **avoid / caution / ok** verdict for a Base ERC-20 (buy/sell honeypot sim + liquidity + ownership + rug activity) | $0.01 |
+| `true402_token_report` | Composite **avoid / caution / ok** verdict for a Base ERC-20 (buy/sell honeypot sim + liquidity + ownership + rug activity) | $0.008 |
 | `true402_token_safety` | Structural safety score 0–100 + flags | $0.005 |
 | `true402_address_safety` | Profile + risk for any address before you send/approve/call it (proxy detection) | $0.005 |
 | `true402_tx_preflight` | Check an **unsigned** transaction before signing: does it revert, does it grant an unlimited approval, has the counterparty been draining liquidity. Takes no key and no signature | $0.008 |
@@ -34,7 +34,7 @@ The model can call, before it trades:
 | `true402_ranked_keywords` | Keywords a domain already ranks for, with position and URL — competitor research or self-audit | $0.05 |
 | `true402_keyword_ideas` | Related/long-tail keyword ideas for a seed term, with volume and search intent | $0.05 |
 
-`payerPrivateKey` is a Base wallet holding a little USDC. Without it the stalls still return their HTTP 402 price, so the agent can decide. Override `baseUrl` / `rpcUrl` in the options if self-hosting.
+`payerPrivateKey` is a Base wallet holding a little USDC. It is required: the tools sign each payment with it, and every call is refused above a $0.25 cap. Override `baseUrl` / `rpcUrl` in the options if self-hosting.
 
 **Checking tokens by hand?** Send any Base token address to [@True402bot](https://t.me/True402bot) on Telegram — same on-chain checks, free, no wallet.
 
